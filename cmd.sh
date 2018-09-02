@@ -1,7 +1,7 @@
 #!/bin/sh
 
-echo "`date` Cleanup..."
+echo "Cleanup..."
 find /src -type f -name *.mo -exec rm -f {} \;
 
-echo "`date` Building..."
+echo "Building..."
 find /src -type f -name *.po -exec /po2mo.sh {} \;
