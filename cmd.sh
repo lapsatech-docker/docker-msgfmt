@@ -54,7 +54,7 @@ case "$1" in
 		
 		echo "Building..."
 		cd /src
-		find . -name *.po -type f -exec sh -c 'FN=$0; SRC=/src/$FN; TARGET=/i18n/$(echo $FN | sed -e 's/\.po$/\.mo/'); msgfmt "$SRC" -o "$TARGET"; ' {} \;
+		find . -name *.po -type f -exec sh -c 'FN=$0; SRC=/src/$FN; TARGET=/i18n/$(echo $FN | sed -e 's/\.po$/\.mo/'); mkdir -p $(dirname $TARGET); msgfmt "$SRC" -o "$TARGET"; ' {} \;
 		exit
 	;;
 	*)
