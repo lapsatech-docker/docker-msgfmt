@@ -15,8 +15,8 @@ POT="$SRC/messages.pot"
 case "$1" in
 	xgettext)
 		echo "Extracting to $POT..."
-		echo xgettext --from-code=UTF-8 --keyword=_ --language=php --add-comments --sort-output -j -o $POT $(find $WEB -type f -name \*.php)
-		xgettext --from-code=UTF-8 --keyword=_ --language=php --add-comments --sort-output -j -o $POT $(find $WEB -type f -name \*.php)
+		echo xgettext --from-code=UTF-8 --keyword=_ --language=php --add-comments --sort-output -o $POT $(find $WEB -type f -name \*.php)
+		xgettext --from-code=UTF-8 --keyword=_ --language=php --add-comments --sort-output -o $POT $(find $WEB -type f -name \*.php)
 		exit
 	;;
 	msginit)
