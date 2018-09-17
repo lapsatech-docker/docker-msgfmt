@@ -8,4 +8,4 @@ WORKDIR /src
 
 COPY *.sh /
 
-CMD ["/cmd.sh"]
+ENTRYPOINT ["/cmd.sh"]
